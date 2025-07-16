@@ -12,39 +12,70 @@
       background: #fff6f8;
       color: #444;
     }
-
     header {
       background: #ffd6e8;
       padding: 30px 20px;
       text-align: center;
     }
-
     header img.logo {
       max-width: 160px;
       margin-bottom: 15px;
     }
-
     header h1 {
       margin: 0;
       font-size: 2em;
       color: #b03060;
     }
-
     header p {
       font-size: 1.1em;
       margin-top: 10px;
     }
-
+    .banner img.banner-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-bottom: 4px solid #ffd6e8;
+    }
+    .advantages h2 {
+      color: #b03060;
+      margin-bottom: 30px;
+    }
+    .advantage-boxes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .advantage {
+      background: #fff;
+     padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-align: center;
+      flex: 1 1 280px;
+      max-width: 300px;
+    }
+    .advantage img {
+      width: 50px;
+      margin-bottom: 10px;
+    }
+    .advantage h3 {
+      color: #333;
+      font-size: 1.1em;
+      margin-bottom: 10px;
+    }
+    .advantage p {
+      font-size: 0.95em;
+      color: #666;
+    }
     .section {
       padding: 30px 20px;
       text-align: center;
     }
-
     .section h2 {
       color: #b03060;
       margin-bottom: 20px;
     }
-
     .highlight {
       background: #ffe3ed;
       padding: 20px;
@@ -54,20 +85,17 @@
       color: #b03060;
       font-weight: 500;
     }
-
     .countdown {
       font-size: 1.5em;
       font-weight: bold;
       color: #e63946;
     }
-
     .product-list {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
       padding: 0 20px 40px;
     }
-
     .product {
       background: #fff;
       border-radius: 12px;
@@ -75,34 +103,28 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       transition: transform 0.3s ease;
     }
-
     .product:hover {
       transform: translateY(-5px);
     }
-
     .product img {
       width: 100%;
       height: auto;
       display: block;
     }
-
     .product-info {
       padding: 15px;
       text-align: center;
     }
-
     .product-title {
       font-size: 1.2em;
       color: #b03060;
       margin-bottom: 5px;
     }
-
     .product-price {
       color: #e63946;
       font-weight: bold;
       margin-bottom: 10px;
     }
-
     .btn-wa {
       background: #25d366;
       color: #fff;
@@ -112,84 +134,102 @@
       display: inline-block;
       transition: background 0.3s ease;
     }
-
     .btn-wa:hover {
       background: #1ebe5d;
     }
-
-    .testimonials {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 20px;
-    }
-
-    .testimonial {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      padding: 15px;
-      text-align: center;
-    }
-
-    .testimonial img {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 10px;
-    }
-
-    .testimonial p {
-      font-size: 0.95em;
-      margin: 10px 0 0;
-      color: #555;
-    }
-
     footer {
       background: #ffeaf2;
       text-align: center;
       padding: 20px;
       font-size: 0.9em;
     }
+    .hero {
+  background: #fefefe;
+  padding: 60px 10px 80px;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 1.8em;
+  color: #444;
+  margin-bottom: 30px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.cta-button {
+  background: #ff5722;
+  color: white;
+  padding: 12px 28px;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 8px 16px rgba(255, 87, 34, 0.2);
+  transition: background 0.3s ease;
+}
+.cta-button:hover {
+  background: #e64a19;
+}
   </style>
 </head>
 <body>
-
-  <header>
-    <img src="https://i.postimg.cc/Kjmm7nRC/JANNAH1.png" alt="Logo Jannah Collection" class="logo" />
-    <h1>Jannah Collection</h1>
-    <p>Hijab Elegan & Nyaman untuk Bayi, Anak, dan Remaja</p>
-  </header>
-
+<header>
+  <img src="https://i.postimg.cc/Kjmm7nRC/JANNAH1.png" alt="Logo Jannah Collection" class="logo" />
+  <h1>Jannah Collection</h1>
+  <p>Hijab & Mukena Elegan dan Nyaman untuk Bayi, Anak, dan Remaja</p>
+</header>
+<!-- 🔻 Banner Bergambar -->
+<section class="banner">
+  <img src="https://down-spe-id.img.susercontent.com/id-11134210-7r98z-ltbul7fcjwela5.jpeg" alt="Banner Promo Jannah Collection" class="banner-img" />
+</section>
+<section class="section advantages">
+  <h2>Kenapa Belanja di Jannah Collection?</h2>
+  <div class="advantage-boxes">
+    <div class="advantage">
+      <img src="https://img.icons8.com/color/96/000000/shipped--v1.png" alt="Gratis Pengiriman" />
+      <h3>Gratis Pengiriman</h3>
+      <p>Pesanan di atas Rp199.000 tanpa biaya kirim.</p>
+    </div>
+    <div class="advantage">
+      <img src="https://img.freepik.com/free-vector/original-quality-stamp_1017-7147.jpg" alt="100% Produk Asli" />
+      <h3>100% Real Product</h3>
+      <p>Produk kami 100% asli & terpercaya.</p>
+    </div>
+    <div class="advantage">
+      <img src="https://img.icons8.com/color/96/000000/customer-support.png" alt="Support 24/7" />
+      <h3>Support 24/7</h3>
+      <p>Tim customer service siap membantu Anda kapan saja.</p>
+    </div>
+  </div>
+</section>
+<section class="hero">
+  <h1>Belanja Mudah & Terpercaya di Jannah Collection</h1>
+  <a href="#produk" class="cta-button">Beli Sekarang</a>
+</section>
+<!-- 🔻 Lanjut ke bagian deskripsi dan lainnya -->
 <section class="section">
   <div class="highlight">
     <h2 style="margin-top: 0;">Kenapa Memilih Jannah Collection?</h2>
     <p>
-      Di <strong>Jannah Collection</strong>, kami memahami betul pentingnya kenyamanan dan tampilan yang syar'i bagi anak-anak, remaja, hingga ibu muda masa kini. 
-      Koleksi hijab kami tidak hanya mengutamakan desain yang modis dan kekinian, tapi juga dibuat dari bahan <strong>berkualitas premium</strong> yang lembut di kulit, adem, dan aman digunakan sehari-hari.
+      Di <strong>Jannah Collection</strong>, kami menghadirkan koleksi hijab dan mukena yang tidak hanya cantik dipakai, tapi juga nyaman dan berkualitas.
+      Dibuat dari bahan pilihan yang adem, lembut, dan tidak membuat gerah — cocok digunakan sehari-hari maupun untuk acara spesial.
     </p>
     <p>
-      💕 Semua produk dirancang khusus agar anak-anak tetap aktif tanpa merasa gerah.<br>
-      ✨ Setiap hijab melewati proses jahit yang rapi dan detail, membuatnya awet dan tampil elegan.<br>
-      🎀 Tersedia berbagai pilihan warna soft yang manis dan motif lucu yang disukai anak-anak.
-    </p>
-    <p>
-      Tidak perlu ragu! Ratusan ibu telah membuktikan kenyamanan dan kualitas produk kami.<br>
-      Saatnya Anda ikut merasakan bagaimana hijab dari Jannah Collection membuat hari-hari si kecil lebih ceria dan percaya diri.
+      ✨ Desain eksklusif & modis <br>
+      🌸 Motif lucu & warna soft yang disukai anak-anak <br>
+      💕 Aman untuk kulit sensitif dan mudah dikenakan <br>
+      🎁 Cocok untuk hadiah, seragam, atau keperluan sekolah
     </p>
     <p style="font-weight: bold; color: #e63946;">
-      Yuk, lengkapi koleksi hijab anak Anda sekarang juga sebelum kehabisan!
+      Yuk, pesan sekarang! Promo terbatas & stok cepat habis!
     </p>
   </div>
 </section>
+
   <section class="section">
     <h2>Promo Spesial! 🎉</h2>
     <p>Diskon khusus hingga <strong>31 Juli 2025</strong>! Jangan lewatkan!</p>
     <div class="countdown" id="countdown"></div>
   </section>
 
-  <section class="section">
+  <section class="section" id="produk">
     <h2>Katalog Produk</h2>
     <div class="product-list">
       <!-- Produk 1 -->
@@ -230,24 +270,6 @@
           <div class="product-price">Rp155.000</div>
           <a class="btn-wa" href="https://schoolseries.ayopayu.web.id" target="_blank">Pesan Sekarang</a>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Testimoni Pelanggan</h2>
-    <div class="testimonials">
-      <div class="testimonial">
-        <img src="https://i.postimg.cc/y6r4fHDL/testi-anak1.jpg" alt="Testimoni 1" />
-        <p>"Bahan adem banget, anakku suka sekali pakai hijab ini!"<br>– Ibu Rina, Jakarta</p>
-      </div>
-      <div class="testimonial">
-        <img src="https://i.postimg.cc/jSmZm4PB/testi-anak2.jpg" alt="Testimoni 2" />
-        <p>"Modelnya lucu dan elegan. Cocok buat ke sekolah atau jalan-jalan."<br>– Mutiara, Bandung</p>
-      </div>
-      <div class="testimonial">
-        <img src="https://i.postimg.cc/XJvFSBv8/testi-anak3.jpg" alt="Testimoni 3" />
-        <p>"Pengiriman cepat, produk sesuai ekspektasi!"<br>– Ibu Desi, Surabaya</p>
       </div>
     </div>
   </section>
