@@ -1,9 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Jannah Collection - Hijab, Mukenah, dan Turban Berkualitas. Tampil syar'i dan stylish dengan koleksi pilihan terbaik.">
   <title>Jannah Collection</title>
   <style>
     body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #fff6f8; color: #444; }
@@ -11,12 +11,10 @@
     header img.logo { width: 180px; margin-bottom: 10px; }
     header h1 { margin: 0; font-size: 2em; color: #b03060; }
     header p { font-size: 1.1em; margin-top: 5px; }
-
     .countdown {
       text-align: center; background: #ffdde8; color: #b03060;
       padding: 15px; font-size: 1.2em; font-weight: bold;
     }
-
     .filter-buttons {
       position: sticky;
       top: 0;
@@ -44,20 +42,38 @@
     }
     .product-list {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 20px;
       padding: 20px;
     }
     .produk {
+      width: 300px;
+    }
+    .card {
+      position: relative;
       background: #fff;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .produk img {
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .card img {
       width: 100%;
-      height: auto;
-      display: block;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .card img {
+      aspect-ratio: 3/4; /* Atau 4/5 tergantung rasio produk lainnya */
+    }
+    .card:hover img {
+      transform: scale(1.05);
     }
     .product-info {
       padding: 15px;
@@ -67,20 +83,47 @@
       color: #b03060;
       margin-bottom: 5px;
     }
-    .product-price {
-      color: #e63946;
+    .product-label {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background-color: #ff4081;
+      color: white;
+      font-size: 0.75em;
       font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 20px;
+      z-index: 2;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .total-pembelian {
+      font-size: 0.9em;
+      color: #888;
+      margin-top: 4px;
+    }
+    .price-pembelian {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       margin-bottom: 10px;
     }
     .btn-wa {
-      background: #25d366;
-      color: #fff;
-      padding: 10px 15px;
-      border-radius: 25px;
+      display: block;
+      width: 100%;
+      padding: 10px 0;
+      margin-top: 10px;
+      background-color: #ff4081;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      text-align: center;
       text-decoration: none;
-      display: inline-block;
+      transition: background-color 0.3s ease;
+      box-sizing: border-box;
     }
-
+    .btn-wa:hover {
+      background-color: #e73370;
+    }
     footer {
       background: #ffeaf2;
       text-align: center;
@@ -102,60 +145,126 @@
   </div>
 
   <div class="filter-buttons">
-    <button onclick="filterProduk('all')">Semua</button>
-    <button onclick="filterProduk('hijabanak')">Hijab Anak</button>
-    <button onclick="filterProduk('hijab dewasa')">Hijab Dewasa</button>
-    <button onclick="filterProduk('gamis')">Gamis</button>
-    <button onclick="filterProduk('turban')">Turban</button>
-  </div>
+  <button onclick="filterProduk('all')">Semua</button>
+  <button onclick="filterProduk('hijabanak')">Hijab Anak</button>
+  <button onclick="filterProduk('hijab-dewasa')">Hijab Dewasa</button>
+  <button onclick="filterProduk('gamis')">Gamis</button>
+  <button onclick="filterProduk('tas')">Tas</button>
+</div>
 
   <section class="product-list">
-
     <div class="produk hijabanak">
-      <img src="https://down-id.img.susercontent.com/file/id-11134207-7rask-m52b2hc4sft2a2.jpeg" alt="Turban Lolly Series">
-      <div class="product-info">
-        <div class="product-title">Turban Lolly Series</div>
-        <div class="product-price">Rp155.000</div>
-        <a class="btn-wa" href="https://loly.ayopayu.web.id">Pesan Sekarang</a>
+      <div class="card">
+          <div class="product-label">Best Seller</div>
+        <img src="https://down-id.img.susercontent.com/file/id-11134207-7rask-m52b2hc4sft2a2.jpeg" alt="Turban Lolly Series">
+        <div class="product-info">
+          <div class="product-title">Turban Lolly Series</div>
+          <div class="price-pembelian">
+          <div class="product-price">Rp155.000</div>
+          <div class="total-pembelian">Terjual 1.250+</div>
+        </div>
+          <a class="btn-wa" href="https://loly.ayopayu.web.id">Pesan Sekarang</a>
+        </div>
       </div>
     </div>
-
-    <div class="produk hijabanak">
+  <div class="produk hijabanak">
+      <div class="card">
+          <div class="product-label">Best Seller</div>
       <img src="https://down-id.img.susercontent.com/file/id-11134207-7rasc-m13mqgqw2ffoc8.jpeg" alt="Bergo Jersey Anak & Bayi">
       <div class="product-info">
-        <div class="product-title">Bergo Jersey Anak & Bayi</div>
-        <div class="product-price">Rp185.000</div>
-        <a class="btn-wa" href="https://bergobayi.ayopayu.web.id">Pesan Sekarang</a>
+          <div class="product-title">Bergo Jersey Anak & Bayi</div>
+          <div class="price-pembelian">
+          <div class="product-price">Rp185.000</div>
+          <div class="total-pembelian">Terjual 1.250+</div>
+        </div>
+          <a class="btn-wa" href="https://bergobayi.ayopayu.web.id">Pesan Sekarang</a>
+        </div>
       </div>
     </div>
-
-    <div class="produk hijabanak">
+  <div class="produk hijabanak">
+      <div class="card">
+          <div class="product-label">Best Seller</div>
       <img src="https://down-id.img.susercontent.com/file/id-11134207-7rbk1-m8o6jf2m4jjh9a.jpeg" alt="Hijab Mahira School Series">
       <div class="product-info">
         <div class="product-title">Hijab Mahira School Series</div>
+          <div class="price-pembelian">
         <div class="product-price">Rp155.000</div>
+          <div class="total-pembelian">Terjual 1.250+</div>
+        </div>
         <a class="btn-wa" href="https://scholl.ayopayu.web.id">Pesan Sekarang</a>
+        </div>
       </div>
     </div>
-
-    <div class="produk hijabanak">
+  <div class="produk hijabanak">
+      <div class="card">
+          <div class="product-label">Best Seller</div>
       <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0h-mbgiym8w6v9icf.jpeg" alt="Hijab Mahira Kids Unicorn">
       <div class="product-info">
         <div class="product-title">Hijab Mahira Kids Unicorn</div>
+          <div class="price-pembelian">
         <div class="product-price">Rp155.000</div>
+          <div class="total-pembelian">Terjual 1.250+</div>
+        </div>
         <a class="btn-wa" href="https://schoolseries.ayopayu.web.id">Pesan Sekarang</a>
+        </div>
       </div>
     </div>
-
-    <div class="produk gamis">
-      <img src="https://i.postimg.cc/NFnnTY84/mukenahpink.jpg" alt="Mukenah Pink Dewasa">
+  <div class="produk hijab-dewasa">
+      <div class="card">
+          <div class="product-label">Best Seller</div>
+      <img src="https://down-id.img.susercontent.com/file/id-11134207-7r991-lop2qfo9n85la9.jpeg" alt="Hijab Mahira Kids Unicorn">
       <div class="product-info">
-        <div class="product-title">Mukenah Pink Dewasa</div>
-        <div class="product-price">Rp225.000</div>
-        <a class="btn-wa" href="https://wa.me/62895396488777?text=Hai%2C+saya+ingin+pesan+Mukenah+Pink+Dewasa">Pesan Sekarang</a>
+        <div class="product-title">Hijab Mahira Kids Unicorn</div>
+          <div class="price-pembelian">
+        <div class="product-price">Rp145.000</div>
+          <div class="total-pembelian">Terjual 1.250+</div>
+        </div>
+        <a class="btn-wa" href="https://emma.orderonline.id/ay-HsiMP">Pesan Sekarang</a>
+        </div>
       </div>
     </div>
-
+  <div class="produk gamis">
+      <div class="card">
+          <div class="product-label">Best Seller</div>
+      <img src="https://down-id.img.susercontent.com/file/id-11134207-7rasb-m15ub4mcwtvm48.jpeg" alt="Gamis Silk Premium Elizha">
+      <div class="product-info">
+        <div class="product-title">Gamis Silk Premium Elizha</div>
+          <div class="price-pembelian">
+        <div class="product-price">Rp261.000</div>
+          <div class="total-pembelian">Terjual 1.250+</div>
+        </div>
+        <a class="btn-wa" href="http://gamiselizha.ayopayu.web.id">Pesan Sekarang</a>
+        </div>
+      </div>
+    </div>
+  <div class="produk tas">
+      <div class="card">
+          <div class="product-label">Best Seller</div>
+      <img src="https://cdn.techcloudly.com/image/c8a0a8f03893b77f54e686d044c097d0ebd656b3.jpeg" alt="Crossbody Leather Bag">
+      <div class="product-info">
+        <div class="product-title">Crossbody Leather Bag</div>
+          <div class="price-pembelian">
+        <div class="product-price">Rp180.900</div>
+          <div class="total-pembelian">Terjual 1.250+</div>
+        </div>
+        <a class="btn-wa" href="https://crossbody.ayopayu.web.id">Pesan Sekarang</a>
+        </div>
+      </div>
+    </div>
+  <div class="produk Tas">
+      <div class="card">
+          <div class="product-label">HOT</div>
+      <img src="https://s.alicdn.com/@sc04/kf/H1f93efe2234742169373e0c3fd14de52s.jpg_720x720q50.jpg" alt="Backpack For Women And Girls 2027-1">
+      <div class="product-info">
+        <div class="product-title">Backpack For Women And Girls 2027-1</div>
+          <div class="price-pembelian">
+        <div class="product-price">Rp166.000</div>
+          <div class="total-pembelian">Terjual 1.250+</div>
+        </div>
+        <a class="btn-wa" href="https://backpack.ayopayu.web.id">Pesan Sekarang</a>
+        </div>
+      </div>
+    </div>
   </section>
 
   <footer>
@@ -178,7 +287,6 @@
       }
     }
 
-    // Countdown 24 jam
     let countdownEnd = new Date().getTime() + 24 * 60 * 60 * 1000;
     let timer = document.getElementById("timer");
     let x = setInterval(function () {
@@ -189,8 +297,7 @@
       let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      timer.innerHTML = hours + "j " + minutes + "m " + seconds + "d ";
-
+      timer.innerHTML = hours + " j " + minutes + " m " + seconds + " d";
       if (distance < 0) {
         clearInterval(x);
         timer.innerHTML = "Promo Telah Berakhir";
@@ -200,4 +307,3 @@
 
 </body>
 </html>
- 
