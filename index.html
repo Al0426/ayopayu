@@ -3,117 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Jannah Collection - Hijab Bayi, Anak, dan Dewasa. Tampil syar'i dan stylish dengan hijab berkualitas dan nyaman." />
-  <title>Jannah Collection - Katalog Hijab</title>
+  <meta name="description" content="Jannah Collection - Hijab, Mukenah, dan Turban Berkualitas. Tampil syar'i dan stylish dengan koleksi pilihan terbaik.">
+  <title>Jannah Collection</title>
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background: #fff6f8;
-      color: #444;
-    }
-    header {
-      background: #ffd6e8;
-      padding: 30px 20px;
-      text-align: center;
-    }
-    header img.logo {
-      max-width: 160px;
-      margin-bottom: 15px;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-      color: #b03060;
-    }
-    header p {
-      font-size: 1.1em;
-      margin-top: 10px;
-    }
-    .banner img.banner-img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-bottom: 4px solid #ffd6e8;
-    }
-    .advantages h2 {
-      color: #b03060;
-      margin-bottom: 30px;
-    }
-    .advantage-boxes {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    .advantage {
-      background: #fff;
-     padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      text-align: center;
-      flex: 1 1 280px;
-      max-width: 300px;
-    }
-    .advantage img {
-      width: 50px;
-      margin-bottom: 10px;
-    }
-    .advantage h3 {
-      color: #333;
-      font-size: 1.1em;
-      margin-bottom: 10px;
-    }
-    .advantage p {
-      font-size: 0.95em;
-      color: #666;
-    }
-    .section {
-      padding: 30px 20px;
-      text-align: center;
-    }
-    .section h2 {
-      color: #b03060;
-      margin-bottom: 20px;
-    }
-    .highlight {
-      background: #ffe3ed;
-      padding: 20px;
-      margin: 20px;
-      border-radius: 12px;
-      font-size: 1.1em;
-      color: #b03060;
-      font-weight: 500;
-    }
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #fff6f8; color: #444; }
+    header { background: #ffd6e8; padding: 10px 20px; text-align: center; }
+    header img.logo { width: 180px; margin-bottom: 10px; }
+    header h1 { margin: 0; font-size: 2em; color: #b03060; }
+    header p { font-size: 1.1em; margin-top: 5px; }
+
     .countdown {
-      font-size: 1.5em;
+      text-align: center; background: #ffdde8; color: #b03060;
+      padding: 15px; font-size: 1.2em; font-weight: bold;
+    }
+
+    .filter-buttons {
+      position: sticky;
+      top: 0;
+      background-color: #fff6f8;
+      z-index: 10;
+      padding: 10px 0;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .filter-buttons button {
+      padding: 10px 18px;
+      margin: 6px 8px;
+      background: linear-gradient(45deg, #ff7eb9, #ff4081);
+      color: white;
       font-weight: bold;
-      color: #e63946;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, background 0.3s;
+    }
+    .filter-buttons button:hover {
+      background: linear-gradient(45deg, #ff4081, #ff7eb9);
+      transform: scale(1.05);
     }
     .product-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      display: flex;
+      flex-direction: column;
       gap: 20px;
-      padding: 0 20px 40px;
+      padding: 20px;
     }
-    .product {
+    .produk {
       background: #fff;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease;
     }
-    .product:hover {
-      transform: translateY(-5px);
-    }
-    .product img {
+    .produk img {
       width: 100%;
       height: auto;
       display: block;
     }
     .product-info {
       padding: 15px;
-      text-align: center;
     }
     .product-title {
       font-size: 1.2em;
@@ -128,181 +75,129 @@
     .btn-wa {
       background: #25d366;
       color: #fff;
-      padding: 10px 20px;
+      padding: 10px 15px;
       border-radius: 25px;
       text-decoration: none;
       display: inline-block;
-      transition: background 0.3s ease;
     }
-    .btn-wa:hover {
-      background: #1ebe5d;
-    }
+
     footer {
       background: #ffeaf2;
       text-align: center;
       padding: 20px;
       font-size: 0.9em;
     }
-    .hero {
-  background: #fefefe;
-  padding: 60px 10px 80px;
-  text-align: center;
-}
-.hero h1 {
-  font-size: 1.8em;
-  color: #444;
-  margin-bottom: 30px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.2);
-}
-.cta-button {
-  background: #ff5722;
-  color: white;
-  padding: 12px 28px;
-  font-weight: bold;
-  border-radius: 30px;
-  text-decoration: none;
-  box-shadow: 0 8px 16px rgba(255, 87, 34, 0.2);
-  transition: background 0.3s ease;
-}
-.cta-button:hover {
-  background: #e64a19;
-}
   </style>
 </head>
 <body>
-<header>
-  <img src="https://i.postimg.cc/Kjmm7nRC/JANNAH1.png" alt="Logo Jannah Collection" class="logo" />
-  <h1>Jannah Collection</h1>
-  <p>Hijab & Mukena Elegan dan Nyaman untuk Bayi, Anak, dan Remaja</p>
-</header>
-<!-- 🔻 Banner Bergambar -->
-<section class="banner">
-  <img src="https://down-spe-id.img.susercontent.com/id-11134210-7r98z-ltbul7fcjwela5.jpeg" alt="Banner Promo Jannah Collection" class="banner-img" />
-</section>
-<section class="section advantages">
-  <h2>Kenapa Belanja di Jannah Collection?</h2>
-  <div class="advantage-boxes">
-    <div class="advantage">
-      <img src="https://img.icons8.com/color/96/000000/shipped--v1.png" alt="Gratis Pengiriman" />
-      <h3>Gratis Pengiriman</h3>
-      <p>Pesanan di atas Rp199.000 tanpa biaya kirim.</p>
-    </div>
-    <div class="advantage">
-      <img src="https://img.freepik.com/free-vector/original-quality-stamp_1017-7147.jpg" alt="100% Produk Asli" />
-      <h3>100% Real Product</h3>
-      <p>Produk kami 100% asli & terpercaya.</p>
-    </div>
-    <div class="advantage">
-      <img src="https://img.icons8.com/color/96/000000/customer-support.png" alt="Support 24/7" />
-      <h3>Support 24/7</h3>
-      <p>Tim customer service siap membantu Anda kapan saja.</p>
-    </div>
+
+  <header>
+    <img src="https://i.postimg.cc/Kjmm7nRC/JANNAH1.png" alt="Logo Jannah" class="logo">
+    <h1>Jannah Collection</h1>
+    <p>Hijab & Mukenah Elegan dan Nyaman untuk Segala Usia</p>
+  </header>
+
+  <div class="countdown">
+    Promo Berakhir Dalam: <span id="timer"></span>
   </div>
-</section>
-<section class="hero">
-  <h1>Belanja Mudah & Terpercaya di Jannah Collection</h1>
-  <a href="#produk" class="cta-button">Beli Sekarang</a>
-</section>
-<!-- 🔻 Lanjut ke bagian deskripsi dan lainnya -->
-<section class="section">
-  <div class="highlight">
-    <h2 style="margin-top: 0;">Kenapa Memilih Jannah Collection?</h2>
-    <p>
-      Di <strong>Jannah Collection</strong>, kami menghadirkan koleksi hijab dan mukena yang tidak hanya cantik dipakai, tapi juga nyaman dan berkualitas.
-      Dibuat dari bahan pilihan yang adem, lembut, dan tidak membuat gerah — cocok digunakan sehari-hari maupun untuk acara spesial.
-    </p>
-    <p>
-      ✨ Desain eksklusif & modis <br>
-      🌸 Motif lucu & warna soft yang disukai anak-anak <br>
-      💕 Aman untuk kulit sensitif dan mudah dikenakan <br>
-      🎁 Cocok untuk hadiah, seragam, atau keperluan sekolah
-    </p>
-    <p style="font-weight: bold; color: #e63946;">
-      Yuk, pesan sekarang! Promo terbatas & stok cepat habis!
-    </p>
+
+  <div class="filter-buttons">
+    <button onclick="filterProduk('all')">Semua</button>
+    <button onclick="filterProduk('hijabanak')">Hijab Anak</button>
+    <button onclick="filterProduk('hijab dewasa')">Hijab Dewasa</button>
+    <button onclick="filterProduk('gamis')">Gamis</button>
+    <button onclick="filterProduk('turban')">Turban</button>
   </div>
-</section>
 
-  <section class="section">
-    <h2>Promo Spesial! 🎉</h2>
-    <p>Diskon khusus hingga <strong>31 Juli 2025</strong>! Jangan lewatkan!</p>
-    <div class="countdown" id="countdown"></div>
-  </section>
+  <section class="product-list">
 
-  <section class="section" id="produk">
-    <h2>Katalog Produk</h2>
-    <div class="product-list">
-      <!-- Produk 1 -->
-      <div class="product">
-        <img src="https://down-id.img.susercontent.com/file/id-11134207-7rask-m52b2hc4sft2a2.jpeg" alt="Turban Lolly Series" />
-        <div class="product-info">
-          <div class="product-title">Turban Lolly Series</div>
-          <div class="product-price">Rp155.000</div>
-          <a class="btn-wa" href="https://loly.ayopayu.web.id" target="_blank">Pesan Sekarang</a>
-        </div>
-      </div>
-
-      <!-- Produk 2 -->
-      <div class="product">
-        <img src="https://down-id.img.susercontent.com/file/id-11134207-7rasc-m13mqgqw2ffoc8.jpeg" alt="Bergo Jersey Anak & Bayi" />
-        <div class="product-info">
-          <div class="product-title">Bergo Jersey Anak & Bayi</div>
-          <div class="product-price">Rp185.000</div>
-          <a class="btn-wa" href="https://bergobayi.ayopayu.web.id" target="_blank">Pesan Sekarang</a>
-        </div>
-      </div>
-
-      <!-- Produk 3 -->
-      <div class="product">
-        <img src="https://down-id.img.susercontent.com/file/id-11134207-7rbk1-m8o6jf2m4jjh9a.jpeg" alt="Hijab Mahira School Series" />
-        <div class="product-info">
-          <div class="product-title">Hijab Mahira School Series</div>
-          <div class="product-price">Rp155.000</div>
-          <a class="btn-wa" href="https://scholl.ayopayu.web.id" target="_blank">Pesan Sekarang</a>
-        </div>
-      </div>
-
-      <!-- Produk 4 -->
-      <div class="product">
-        <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0h-mbgiym8w6v9icf.jpeg" alt="Hijab Mahira Kids Unicorn" />
-        <div class="product-info">
-          <div class="product-title">Hijab Mahira Kids Unicorn</div>
-          <div class="product-price">Rp155.000</div>
-          <a class="btn-wa" href="https://schoolseries.ayopayu.web.id" target="_blank">Pesan Sekarang</a>
-        </div>
+    <div class="produk hijabanak">
+      <img src="https://down-id.img.susercontent.com/file/id-11134207-7rask-m52b2hc4sft2a2.jpeg" alt="Turban Lolly Series">
+      <div class="product-info">
+        <div class="product-title">Turban Lolly Series</div>
+        <div class="product-price">Rp155.000</div>
+        <a class="btn-wa" href="https://loly.ayopayu.web.id">Pesan Sekarang</a>
       </div>
     </div>
+
+    <div class="produk hijabanak">
+      <img src="https://down-id.img.susercontent.com/file/id-11134207-7rasc-m13mqgqw2ffoc8.jpeg" alt="Bergo Jersey Anak & Bayi">
+      <div class="product-info">
+        <div class="product-title">Bergo Jersey Anak & Bayi</div>
+        <div class="product-price">Rp185.000</div>
+        <a class="btn-wa" href="https://bergobayi.ayopayu.web.id">Pesan Sekarang</a>
+      </div>
+    </div>
+
+    <div class="produk hijabanak">
+      <img src="https://down-id.img.susercontent.com/file/id-11134207-7rbk1-m8o6jf2m4jjh9a.jpeg" alt="Hijab Mahira School Series">
+      <div class="product-info">
+        <div class="product-title">Hijab Mahira School Series</div>
+        <div class="product-price">Rp155.000</div>
+        <a class="btn-wa" href="https://scholl.ayopayu.web.id">Pesan Sekarang</a>
+      </div>
+    </div>
+
+    <div class="produk hijabanak">
+      <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0h-mbgiym8w6v9icf.jpeg" alt="Hijab Mahira Kids Unicorn">
+      <div class="product-info">
+        <div class="product-title">Hijab Mahira Kids Unicorn</div>
+        <div class="product-price">Rp155.000</div>
+        <a class="btn-wa" href="https://schoolseries.ayopayu.web.id">Pesan Sekarang</a>
+      </div>
+    </div>
+
+    <div class="produk gamis">
+      <img src="https://i.postimg.cc/NFnnTY84/mukenahpink.jpg" alt="Mukenah Pink Dewasa">
+      <div class="product-info">
+        <div class="product-title">Mukenah Pink Dewasa</div>
+        <div class="product-price">Rp225.000</div>
+        <a class="btn-wa" href="https://wa.me/62895396488777?text=Hai%2C+saya+ingin+pesan+Mukenah+Pink+Dewasa">Pesan Sekarang</a>
+      </div>
+    </div>
+
   </section>
 
   <footer>
     &copy; 2025 Jannah Collection. All rights reserved.
   </footer>
 
-  <!-- Countdown Script -->
-<script>
-  const countdown = document.getElementById("countdown");
-
-  // Set waktu akhir promo: 24 jam dari saat halaman dibuka
-  const startTime = new Date().getTime();
-  const endTime = startTime + 24 * 60 * 60 * 1000;
-
-  const timer = setInterval(function () {
-    const now = new Date().getTime();
-    const distance = endTime - now;
-
-    if (distance < 0) {
-      countdown.innerHTML = "Promo telah berakhir!";
-      clearInterval(timer);
-      return;
+  <script>
+    function filterProduk(kategori) {
+      var semuaProduk = document.getElementsByClassName("produk");
+      for (var i = 0; i < semuaProduk.length; i++) {
+        if (kategori === "all") {
+          semuaProduk[i].style.display = "block";
+        } else {
+          if (semuaProduk[i].classList.contains(kategori)) {
+            semuaProduk[i].style.display = "block";
+          } else {
+            semuaProduk[i].style.display = "none";
+          }
+        }
+      }
     }
 
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    // Countdown 24 jam
+    let countdownEnd = new Date().getTime() + 24 * 60 * 60 * 1000;
+    let timer = document.getElementById("timer");
+    let x = setInterval(function () {
+      let now = new Date().getTime();
+      let distance = countdownEnd - now;
 
-    countdown.innerHTML = `${hours}j ${minutes}m ${seconds}d`;
-  }, 1000);
-</script>
+      let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      timer.innerHTML = hours + "j " + minutes + "m " + seconds + "d ";
+
+      if (distance < 0) {
+        clearInterval(x);
+        timer.innerHTML = "Promo Telah Berakhir";
+      }
+    }, 1000);
+  </script>
 
 </body>
 </html>
+ 
