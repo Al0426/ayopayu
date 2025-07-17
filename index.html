@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -96,6 +95,54 @@
       z-index: 2;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
+    .premium-section {
+      background: linear-gradient(to bottom, #fdf7fb, #ffffff);
+      padding: 16px 12px; /* Lebih ramping atas-bawah */
+      text-align: center;
+      border-radius: 16px;
+      max-width: 100%;
+      margin: 0 auto 20px;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.03);
+    }
+    .premium-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: #a0675f;
+      margin-bottom: 6px;
+    }
+    .premium-subtitle {
+      font-size: 17px;
+      color: #666;
+      margin-bottom: 12px;
+    }
+    .premium-tags {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .premium-tags span {
+      background-color: #fff6db;
+      color: #a88c5d;
+      padding: 6px 14px;
+      border-radius: 18px;
+      font-size: 14px;
+      font-weight: 500;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+    }
+    .premium-video {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .premium-video iframe,
+    .premium-video video {
+      width: 100%;
+      max-width: 640px; /* diperbesar dari 480px */
+      aspect-ratio: 16 / 9;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+    }
     .total-pembelian {
       font-size: 0.9em;
       color: #888;
@@ -140,10 +187,6 @@
     <p>Hijab & Mukenah Elegan dan Nyaman untuk Segala Usia</p>
   </header>
 
-  <div class="countdown">
-    Promo Berakhir Dalam: <span id="timer"></span>
-  </div>
-
   <div class="filter-buttons">
   <button onclick="filterProduk('all')">Semua</button>
   <button onclick="filterProduk('hijabanak')">Hijab Anak</button>
@@ -151,6 +194,25 @@
   <button onclick="filterProduk('gamis')">Gamis</button>
   <button onclick="filterProduk('tas')">Tas</button>
 </div>
+
+<section class="premium-section">
+  <h2 class="premium-title">Premium Hijab Collection</h2>
+  <p class="premium-subtitle">Fashion Quality Hijabs With Modern Designs.</p>
+  <div class="premium-tags">
+    <span>Model Premium</span>
+    <span>Bahan Berkualitas</span>
+    <span>Spesial Promo</span>
+  </div>
+
+  <!-- Video YouTube -->
+  <div class="premium-video">
+    <iframe src="https://cdn.pixabay.com/video/2020/12/13/59093-490977482_large.mp4" 
+            title="Video Hijab"
+            frameborder="0"
+            allowfullscreen>
+    </iframe>
+    </div>
+</section>
 
   <section class="product-list">
     <div class="produk hijabanak">
@@ -161,7 +223,7 @@
           <div class="product-title">Turban Lolly Series</div>
           <div class="price-pembelian">
           <div class="product-price">Rp155.000</div>
-          <div class="total-pembelian">Terjual 1.250+</div>
+          <div class="total-pembelian">Terjual 419</div>
         </div>
           <a class="btn-wa" href="https://loly.ayopayu.web.id">Pesan Sekarang</a>
         </div>
@@ -175,7 +237,7 @@
           <div class="product-title">Bergo Jersey Anak & Bayi</div>
           <div class="price-pembelian">
           <div class="product-price">Rp185.000</div>
-          <div class="total-pembelian">Terjual 1.250+</div>
+          <div class="total-pembelian">Terjual 469</div>
         </div>
           <a class="btn-wa" href="https://bergobayi.ayopayu.web.id">Pesan Sekarang</a>
         </div>
@@ -189,7 +251,7 @@
         <div class="product-title">Hijab Mahira School Series</div>
           <div class="price-pembelian">
         <div class="product-price">Rp155.000</div>
-          <div class="total-pembelian">Terjual 1.250+</div>
+          <div class="total-pembelian">Terjual 752</div>
         </div>
         <a class="btn-wa" href="https://scholl.ayopayu.web.id">Pesan Sekarang</a>
         </div>
@@ -197,13 +259,13 @@
     </div>
   <div class="produk hijabanak">
       <div class="card">
-          <div class="product-label">Best Seller</div>
+          <div class="product-label">HOT</div>
       <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0h-mbgiym8w6v9icf.jpeg" alt="Hijab Mahira Kids Unicorn">
       <div class="product-info">
         <div class="product-title">Hijab Mahira Kids Unicorn</div>
           <div class="price-pembelian">
         <div class="product-price">Rp155.000</div>
-          <div class="total-pembelian">Terjual 1.250+</div>
+          <div class="total-pembelian">Terjual 159</div>
         </div>
         <a class="btn-wa" href="https://schoolseries.ayopayu.web.id">Pesan Sekarang</a>
         </div>
@@ -217,7 +279,7 @@
         <div class="product-title">Hijab Mahira Kids Unicorn</div>
           <div class="price-pembelian">
         <div class="product-price">Rp145.000</div>
-          <div class="total-pembelian">Terjual 1.250+</div>
+          <div class="total-pembelian">Terjual 421</div>
         </div>
         <a class="btn-wa" href="https://emma.orderonline.id/ay-HsiMP">Pesan Sekarang</a>
         </div>
@@ -231,27 +293,27 @@
         <div class="product-title">Gamis Silk Premium Elizha</div>
           <div class="price-pembelian">
         <div class="product-price">Rp261.000</div>
-          <div class="total-pembelian">Terjual 1.250+</div>
+          <div class="total-pembelian">Terjual 921</div>
         </div>
         <a class="btn-wa" href="http://gamiselizha.ayopayu.web.id">Pesan Sekarang</a>
         </div>
       </div>
     </div>
-  <div class="produk tas">
-      <div class="card">
-          <div class="product-label">Best Seller</div>
-      <img src="https://cdn.techcloudly.com/image/c8a0a8f03893b77f54e686d044c097d0ebd656b3.jpeg" alt="Crossbody Leather Bag">
-      <div class="product-info">
-        <div class="product-title">Crossbody Leather Bag</div>
-          <div class="price-pembelian">
+    <div class="produk tas">
+  <div class="card">
+    <div class="product-label">Best Seller</div>
+    <img src="https://cdn.techcloudly.com/image/c8a0a8f03893b77f54e686d044c097d0ebd656b3.jpeg" alt="Crossbody Leather Bag">
+    <div class="product-info">
+      <div class="product-title">Crossbody Leather Bag</div>
+      <div class="price-pembelian">
         <div class="product-price">Rp180.900</div>
-          <div class="total-pembelian">Terjual 1.250+</div>
-        </div>
-        <a class="btn-wa" href="https://crossbody.ayopayu.web.id">Pesan Sekarang</a>
-        </div>
+        <div class="total-pembelian">Terjual 348</div>
       </div>
+      <a class="btn-wa" href="https://crossbody.ayopayu.web.id">Pesan Sekarang</a>
     </div>
-  <div class="produk Tas">
+  </div>
+</div>
+  <div class="produk tas">
       <div class="card">
           <div class="product-label">HOT</div>
       <img src="https://s.alicdn.com/@sc04/kf/H1f93efe2234742169373e0c3fd14de52s.jpg_720x720q50.jpg" alt="Backpack For Women And Girls 2027-1">
@@ -259,7 +321,7 @@
         <div class="product-title">Backpack For Women And Girls 2027-1</div>
           <div class="price-pembelian">
         <div class="product-price">Rp166.000</div>
-          <div class="total-pembelian">Terjual 1.250+</div>
+          <div class="total-pembelian">Terjual 814</div>
         </div>
         <a class="btn-wa" href="https://backpack.ayopayu.web.id">Pesan Sekarang</a>
         </div>
