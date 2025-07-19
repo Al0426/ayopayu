@@ -196,13 +196,22 @@
     #pagination button:hover {
       background-color: #ff80a5;
       color: white;
-    }
+    }  
+@media (max-width: 768px) {
+  header img.logo {
+    display: block !important;
+    width: 140px;
+    max-width: 90%;
+    height: auto;
+    margin: 0 auto 10px;
+  }
+}
   </style>
 </head>
 <body>
 
 <header>
-  <a href="https://ibb.co/wryg5Swf"><img src="https://i.ibb.co/1JZQFrdk/JANNAH1.png" alt="JANNAH1" border="0"></a>
+  <img class="logo" src="https://i.ibb.co/1JZQFrdk/JANNAH1.png" alt="JANNAH1" />
   <h1>Jannah Collection</h1>
   <p>Hijab & Fashion Elegan dan Nyaman untuk Segala Usia Mulai Sejak Dini Sampai Dewasa</p>
 </header>
@@ -411,6 +420,7 @@ function tampilkanHalamanProduk(halaman) {
 function buatTombolPagination(jumlahHalaman, aktif) {
   const pagination = document.getElementById('pagination');
   pagination.innerHTML = '';
+pagination.style.display = jumlahHalaman <= 1 ? 'none' : 'block';
 
   if (jumlahHalaman <= 1) return;
 
